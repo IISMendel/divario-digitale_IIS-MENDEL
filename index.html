@@ -276,12 +276,7 @@
             margin: 1rem auto;
         }
         
-        .footer-logos {
-            margin-top: 1rem;
-            /* Qui puoi inserire i loghi PNRR e IIS Mendel */
-            font-style: italic;
-            opacity: 0.7;
-        }
+        /* Classe footer-logos rimossa */
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
@@ -312,7 +307,6 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#strategie">Strategie</a></li>
-                    <li><a href="#peer-education">Peer Education</a></li>
                     <li><a href="#risorse">Risorse</a></li>
                     <li><a href="#chi-siamo">Chi Siamo</a></li>
                 </ul>
@@ -331,16 +325,9 @@
                 <div class="card-grid">
                     <div class="card">
                         <div class="card-content">
-                            <h3>Le Nostre Strategie</h3>
+                            <h3>Le Nostre StrategIE</h3>
                             <p>Scopri i 4 pilastri del nostro intervento: dall'accesso alle risorse alla formazione dei docenti e al supporto alle famiglie.</p>
                             <a href="#strategie" class="btn">Approfondisci</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <h3>Focus: Peer Education</h3>
-                            <p>Il nostro progetto speciale dove gli studenti diventano formatori per i propri compagni. Un modo efficace per imparare insieme.</p>
-                            <a href="#peer-education" class="btn">Scopri il Progetto</a>
                         </div>
                     </div>
                     <div class="card">
@@ -350,6 +337,12 @@
                             <a href="#risorse" class="btn">Vai alle Risorse</a>
                         </div>
                     </div>
+                    <div class="card" style="background-color: var(--colore-sfondo); border-style: dashed; border-color: #ccc;">
+                        <div class="card-content" style="text-align: center; color: #777;">
+                            <h3 style="color: #777;">Prossimamente</h3>
+                            <p>Sezione Peer Education in arrivo...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -357,7 +350,14 @@
         <section id="strategie" class="page-section">
             <div class="container">
                 <h2>Come Riduciamo il Divario Digitale</h2>
-                <p>Il nostro istituto agisce su più fronti per promuovere l'inclusione digitale. Clicca sulle sezioni per espanderle.</p>
+
+                <h3 style="margin-top: 2rem;">Progetto Buone Pratiche per l'Innovazione Didattica</h3>
+                <p>Queste sono le risorse principali sviluppate dal nostro team per supportare il progetto:</p>
+                <ul class="resource-list" style="margin-bottom: 2rem; border-top: 1px dashed #ccc;">
+                    <li><a href="https://iismendel.github.io/Progetto-PNNR-Buone-Pratiche_PANORAMICA_IIS-MENDEL/" target="_blank"><strong>Panoramica Progetto Buone Pratiche PNRR</strong></a><span> (La visione d'insieme del nostro progetto)</span></li>
+                    <li><a href="https://iismendel.github.io/Hub-software-gratuiti-per-studenti-e-docenti_IIS-MENDEL/" target="_blank"><strong>Hub Software Gratuiti</strong></a><span> (Risorse software per studenti e docenti)</span></li>
+                </ul>
+                <p style="margin-top: 2rem;">Il nostro istituto agisce sui seguenti fronti per promuovere l'inclusione digitale. Clicca sulle sezioni per espanderle.</p>
                 
                 <div class="accordion">
                     <div class="accordion-item">
@@ -397,55 +397,6 @@
             </div>
         </section>
         
-        <section id="peer-education" class="page-section">
-            <div class="container">
-                <h2>Progetto "Peer Education" Digitale</h2>
-                <p>Crediamo che l'educazione tra pari sia una metodologia vincente. Studenti formati diventano educatori per i propri compagni. Ecco perché funziona:</p>
-                <ul>
-                    <li><strong>Linguaggio Comune:</strong> I pari comunicano in modo più diretto.</li>
-                    <li><strong>Maggiore Motivazione:</strong> Imparare da un compagno è meno intimidatorio.</li>
-                    <li><strong>Doppio Sviluppo:</strong> Chi insegna sviluppa leadership, chi impara acquisisce competenze.</li>
-                </ul>
-
-                <h3>Il Progetto nel Nostro Istituto Agrario</h3>
-                <p>Formiamo i "peer educators" su temi specifici, fondamentali per il nostro indirizzo di studi.</p>
-                
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-content">
-                            <h4>Software per l'Agricoltura</h4>
-                            <p>Sessioni pratiche su QGIS per la mappatura, software di gestione aziendale e analisi dati da stazioni meteo.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <h4>Tecnologie Agricoltura 4.0</h4>
-                            <p>Workshop sull'uso di droni per il monitoraggio, sensori IoT per l'irrigazione e app mobili avanzate.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <h4>Creazione Contenuti Digitali</h4>
-                            <p>Creare video dimostrativi su pratiche sostenibili, infografiche e strategie di marketing digitale per prodotti agroalimentari.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <h4>Sicurezza e Netiquette</h4>
-                            <p>Riconoscere phishing e truffe, gestire la privacy e redigere e-mail formali per il contesto lavorativo.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 style="margin-top: 2rem;">Le Fasi del Progetto</h3>
-                <ol>
-                    <li><strong>Selezione e Formazione:</strong> Identifichiamo gli studenti "mentori" e offriamo loro un corso intensivo.</li>
-                    <li><strong>Attività Pratiche:</strong> Organizziamo laboratori, "Sportelli Digitali" di supporto e creiamo materiali (guide, video tutorial).</li>
-                    <li><strong>Monitoraggio:</strong> Raccogliamo feedback costanti per valutare i progressi di tutti gli studenti coinvolti.</li>
-                </ol>
-            </div>
-        </section>
-        
         <section id="risorse" class="page-section">
             <div class="container">
                 <h2>Risorse, Strumenti e Piattaforme</h2>
@@ -461,7 +412,7 @@
                 <h3>🤝 Linee Guida (Peer Education e Competenze)</h3>
                 <ul class="resource-list">
                     <li><a href="https://www.indire.it/" target="_blank"><strong>INDIRE - Risorse per l'innovazione</strong></a></li>
-                    <li><a href="https://www.generazioniconnesse.it/" target="_blank"><strong>Generazioni Connesse - Peer Education</strong></a></li>
+                    <li><a href="https://www.generazioniconnesse.it/" target="_blank"><strong>Generazioni Connesse</strong></a></li>
                     <li><a href="http://www.eun.org/" target="_blank"><strong>European Schoolnet</strong></a></li>
                     <li><a href="https://www.agid.gov.it/it/design-servizi/competenze-digitali" target="_blank"><strong>DigComp - Framework europeo</strong></a><span> (Pagina di riferimento AGID)</span></li>
                 </ul>
@@ -492,6 +443,7 @@
                     <li><a href="https://www.horta-srl.it/horta-4-school-lagricoltura-4-0-tra-i-banchi-di-scuola-comunicato-stampa-1-2020/" target="_blank"><strong>Horta4School</strong></a><span> (Progetto per introdurre l'agricoltura di precisione nelle scuole)</span></li>
                     <li><a href="https://fem.digital/didattica-stem-ambiente/" target="_blank"><strong>Future Education Modena (FEM)</strong></a><span> (Kit didattici innovativi STEM, idroponica e sostenibilità)</span></li>
                 </ul>
+
                 <h3>🚜 Software Gratuiti per la Didattica (STEM e Agrario)</h3>
                 <ul class="resource-list">
                     <li><a href="https://iismendel.github.io/Hub-software-gratuiti-per-studenti-e-docenti_IIS-MENDEL/" target="_blank"><strong>Hub Software Gratuiti IIS MENDEL</strong></a><span> (Pagina curata dal Team Buone Pratiche)</span></li>
@@ -502,6 +454,7 @@
                     <li><a href="https://www.gimp.org/" target="_blank"><strong>GIMP</strong></a><span> (Editor di immagini gratuito)</span></li>
                     <li><a href="https://stellarium.org/it/" target="_blank"><strong>Stellarium</strong></a><span> (Planetario virtuale)</span></li>
                 </ul>
+                
                 <h3>📈 Banche Dati e Risorse Specializzate</h3>
                 <ul class="resource-list">
                     <li><a href="https://www.fao.org/faostat/en/" target="_blank"><strong>FAOSTAT</strong></a><span> (Statistiche agricole mondiali)</span></li>
@@ -518,11 +471,7 @@
         <div class="container">
             <h4>Un Progetto del "Team Buone Pratiche"</h4>
             <p>Questa risorsa è stata sviluppata dal <strong>Team Buone Pratiche per l'Innovazione Didattica</strong> dell'IIS Mendel, un gruppo di lavoro dedicato alla ricerca e condivisione di metodologie innovative per il miglioramento della qualità educativa.</p>
-            <div class="footer-logos">
-                <p>[Logo IIS Mendel] - [Logo PNRR]</p>
-                <p>Progetto realizzato nell'ambito del Piano Nazionale di Ripresa e Resilienza (PNRR) per supportare l'inclusione educativa e l'innovazione digitale.</p>
             </div>
-        </div>
     </footer>
 
     <script>
