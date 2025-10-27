@@ -6,11 +6,10 @@
     <title>Progetto Divario Digitale - IIS Mendel</title>
     
     <style>
-        /* --- Variabili Colori (da personalizzare) --- */
         :root {
-            --colore-primario: #004a99; /* Blu scuro istituzionale */
-            --colore-secondario: #007bff; /* Blu più acceso */
-            --colore-accento: #28a745;  /* Verde per l'agrario */
+            --colore-primario: #004a99;
+            --colore-secondario: #007bff;
+            --colore-accento: #28a745;
             --colore-testo: #333;
             --colore-sfondo: #f4f7f6;
             --colore-card: #ffffff;
@@ -18,17 +17,8 @@
             --ombra-leggera: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        /* --- Reset e Stili Generali --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth; /* Per navigazione fluida */
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -36,45 +26,18 @@
             color: var(--colore-testo);
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        h1, h2, h3, h4 {
-            color: var(--colore-primario);
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-        
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3, h4 { color: var(--colore-primario); margin-bottom: 1rem; line-height: 1.3; }
         h1 { font-size: 2.5rem; }
         h2 { font-size: 2rem; border-bottom: 2px solid var(--colore-accento); padding-bottom: 10px; }
         h3 { font-size: 1.5rem; color: var(--colore-secondario); }
         h4 { font-size: 1.2rem; }
+        p { margin-bottom: 1rem; }
+        ul, ol { margin-bottom: 1rem; padding-left: 20px; }
+        li { margin-bottom: 0.5rem; }
+        a { color: var(--colore-secondario); text-decoration: none; }
+        a:hover { text-decoration: underline; }
 
-        p {
-            margin-bottom: 1rem;
-        }
-
-        ul, ol {
-            margin-bottom: 1rem;
-            padding-left: 20px;
-        }
-        
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        a {
-            color: var(--colore-secondario);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Header e Navigazione --- */
         .main-header {
             background: var(--colore-header);
             box-shadow: var(--ombra-leggera);
@@ -84,62 +47,32 @@
             z-index: 100;
             border-bottom: 3px solid var(--colore-primario);
         }
-
         .main-header .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--colore-primario);
-        }
-        
-        .main-nav ul {
-            display: flex;
-            list-style: none;
-            padding: 0;
-        }
-        
-        .main-nav li {
-            margin-left: 20px;
-        }
-        
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--colore-primario); }
+        .main-nav ul { display: flex; list-style: none; padding: 0; }
+        .main-nav li { margin-left: 20px; }
         .main-nav a {
             font-weight: 600;
             padding: 8px 12px;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
         }
-        
-        .main-nav a:hover {
-            background-color: var(--colore-accento);
-            color: #fff;
-            text-decoration: none;
-        }
+        .main-nav a:hover { background-color: var(--colore-accento); color: #fff; text-decoration: none; }
 
-        /* --- Sezioni (Pagine) --- */
-        .page-section {
-            padding: 60px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        .page-section:nth-child(even) {
-            background-color: #fff;
-        }
-        .page-section:last-of-type {
-            border-bottom: none;
-        }
+        .page-section { padding: 60px 0; border-bottom: 1px solid #ddd; }
+        .page-section:nth-child(even) { background-color: #fff; }
+        .page-section:last-of-type { border-bottom: none; }
 
-        /* --- Stile Card (Home & Peer Edu) --- */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             margin-top: 2rem;
         }
-
         .card {
             background: var(--colore-card);
             border-radius: 8px;
@@ -149,21 +82,9 @@
             display: flex;
             flex-direction: column;
         }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-        }
-
-        .card-content {
-            padding: 25px;
-            flex-grow: 1;
-        }
-
-        .card-content h3 {
-            margin-top: 0;
-        }
-        
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .card-content { padding: 25px; flex-grow: 1; }
+        .card-content h3 { margin-top: 0; }
         .card-content a.btn {
             display: inline-block;
             background: var(--colore-secondario);
@@ -175,12 +96,8 @@
             margin-top: 1rem;
             transition: background-color 0.3s;
         }
-        
-        .card-content a.btn:hover {
-            background: var(--colore-primario);
-        }
+        .card-content a.btn:hover { background: var(--colore-primario); }
 
-        /* --- Stile Accordion (Strategie) --- */
         .accordion-item {
             background: var(--colore-card);
             border: 1px solid #ddd;
@@ -188,7 +105,6 @@
             margin-bottom: 10px;
             overflow: hidden;
         }
-
         .accordion-button {
             background: var(--colore-sfondo);
             border: none;
@@ -204,295 +120,245 @@
             align-items: center;
             transition: background-color 0.3s;
         }
-        
-        .accordion-button:hover {
-            background-color: #e9eef5;
-        }
-        
+        .accordion-button:hover { background-color: #e9eef5; }
         .accordion-button::after {
-            content: '+'; /* Simbolo per "espandi" */
+            content: '+';
             font-size: 1.8rem;
             font-weight: bold;
             color: var(--colore-secondario);
             transition: transform 0.3s;
         }
-        
-        .accordion-button.active::after {
-            content: '−'; /* Simbolo per "comprimi" */
-            transform: rotate(180deg);
-        }
-
+        .accordion-button.active::after { content: '−'; transform: rotate(180deg); }
         .accordion-panel {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out, padding 0.3s ease-out;
             padding: 0 20px;
         }
-        
-        .accordion-panel.active {
-            padding: 20px;
-            max-height: 1000px; /* Valore alto per permettere il contenuto */
-        }
+        .accordion-panel.active { padding: 20px; max-height: 1000px; }
 
-        /* --- Stile Liste (Risorse) --- */
-        .resource-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .resource-list li {
-            padding: 10px 0;
-            border-bottom: 1px dashed #ccc;
-        }
-        .resource-list strong {
-            color: var(--colore-primario);
-            font-size: 1.1rem;
-        }
-        .resource-list a {
-            font-weight: 600;
-        }
-        .resource-list span {
-            display: block;
-            font-size: 0.9rem;
-            margin-top: 2px;
-        }
+        .resource-list { list-style-type: none; padding-left: 0; }
+        .resource-list li { padding: 10px 0; border-bottom: 1px dashed #ccc; }
+        .resource-list strong { color: var(--colore-primario); font-size: 1.1rem; }
+        .resource-list a { font-weight: 600; }
+        .resource-list span { display: block; font-size: 0.9rem; margin-top: 2px; }
 
-
-        /* --- Footer --- */
         .main-footer {
             background: #333;
             color: #fff;
             padding: 40px 0;
             text-align: center;
         }
-        
-        .main-footer h4 {
-            color: #fff;
-        }
-        
-        .main-footer p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            max-width: 600px;
-            margin: 1rem auto;
-        }
-        
-        /* Classe footer-logos rimossa */
+        .main-footer h4 { color: #fff; }
+        .main-footer p { font-size: 0.9rem; opacity: 0.8; max-width: 600px; margin: 1rem auto; }
 
-        /* --- Responsive Design --- */
         @media (max-width: 768px) {
-            .main-header .container {
-                flex-direction: column;
-            }
-            .main-nav ul {
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-                margin-top: 1rem;
-            }
-            .main-nav li {
-                margin: 5px 0;
-            }
+            .main-header .container { flex-direction: column; }
+            .main-nav ul { flex-direction: column; width: 100%; text-align: center; margin-top: 1rem; }
+            .main-nav li { margin: 5px 0; }
             h1 { font-size: 2rem; }
             h2 { font-size: 1.7rem; }
         }
-
     </style>
-    </head>
+</head>
 <body>
 
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">IIS Mendel - Progetto Digitale</div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#strategie">Strategie</a></li>
-                    <li><a href="#risorse">Risorse</a></li>
-                    <li><a href="#chi-siamo">Chi Siamo</a></li>
-                </ul>
-            </nav>
+<header class="main-header">
+    <div class="container">
+        <div class="logo">IIS Mendel - Progetto Digitale</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#strategie">Strategie</a></li>
+                <li><a href="#risorse">Risorse</a></li>
+                <li><a href="#chi-siamo">Chi Siamo</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section id="home" class="page-section">
+    <div class="container">
+        <h1>Il Divario Digitale: Il Ruolo della Nostra Scuola</h1>
+        <p class="lead">Il divario digitale non è solo non avere un PC. Oggi, significa non avere le <strong>competenze per usare le tecnologie</strong> in modo efficace, critico e consapevole.</p>
+        <p>Come istituto, il nostro ruolo è cruciale: dobbiamo colmare questa lacuna e garantire a tutti gli studenti le abilità per prosperare nel mondo digitale. Questo progetto, supportato anche dai fondi PNRR, definisce il nostro impegno.</p>
+        
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Le Nostre Strategie</h3>
+                    <p>Scopri i 4 pilastri del nostro intervento: dall'accesso alle risorse alla formazione dei docenti.</p>
+                    <a href="#strategie" class="btn">Approfondisci</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Risorse e Strumenti</h3>
+                    <p>Una raccolta di link, piattaforme e software gratuiti (molti specifici per l'agrario) per studenti e docenti.</p>
+                    <a href="#risorse" class="btn">Vai alle Risorse</a>
+                </div>
+            </div>
+            <div class="card" style="background-color: var(--colore-sfondo); border-style: dashed; border-color: #ccc;">
+                <div class="card-content" style="text-align: center; color: #777;">
+                    <h3 style="color: #777;">Prossimamente</h3>
+                    <p>Sezione Peer Education in arrivo...</p>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <main>
+<section id="strategie" class="page-section">
+    <div class="container">
+        <h2>Come Riduciamo il Divario Digitale</h2>
 
-        <section id="home" class="page-section">
-            <div class="container">
-                <h1>Il Divario Digitale: Il Ruolo della Nostra Scuola</h1>
-                <p class="lead">Il divario digitale non è solo non avere un PC. Oggi, significa non avere le <strong>competenze per usare le tecnologie</strong> in modo efficace, critico e consapevole.</p>
-                <p>Come istituto, il nostro ruolo è cruciale: dobbiamo colmare questa lacuna e garantire a tutti gli studenti le abilità per prosperare nel mondo digitale. Questo progetto, supportato anche dai fondi PNRR, definisce il nostro impegno.</p>
-                
-                <div class="card-grid">
-                    <div class="card">
-                        <div class="card-content">
-                            <h3>Le Nostre Strategie</h3>
-                            <p>Scopri i 4 pilastri del nostro intervento: dall'accesso alle risorse alla formazione dei docenti e al supporto alle famiglie.</p>
-                            <a href="#strategie" class="btn">Approfondisci</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <h3>Risorse e Strumenti</h3>
-                            <p>Una raccolta di link, piattaforme e software gratuiti (molti specifici per l'agrario) per studenti e docenti.</p>
-                            <a href="#risorse" class="btn">Vai alle Risorse</a>
-                        </div>
-                    </div>
-                    <div class="card" style="background-color: var(--colore-sfondo); border-style: dashed; border-color: #ccc;">
-                        <div class="card-content" style="text-align: center; color: #777;">
-                            <h3 style="color: #777;">Prossimamente</h3>
-                            <p>Sezione Peer Education in arrivo...</p>
-                        </div>
-                    </div>
+        <h3 style="margin-top: 2rem;">Progetto Buone Pratiche per l'Innovazione Didattica</h3>
+        <p>Queste sono le risorse principali sviluppate dal nostro team per supportare il progetto:</p>
+        <ul class="resource-list" style="margin-bottom: 2rem; border-top: 1px dashed #ccc;">
+            <li><a href="https://iismendel.github.io/Progetto-PNNR-Buone-Pratiche_PANORAMICA_IIS-MENDEL/" target="_blank"><strong>Panoramica Progetto Buone Pratiche PNRR</strong></a><span> (La visione d'insieme del nostro progetto)</span></li>
+            <li><a href="https://iismendel.github.io/Hub-software-gratuiti-per-studenti-e-docenti_IIS-MENDEL/" target="_blank"><strong>Hub Software Gratuiti</strong></a><span> (Risorse software per studenti e docenti)</span></li>
+        </ul>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">💻 Garanzia di Accesso e Risorse</button>
+                <div class="accordion-panel">
+                    <ul>
+                        <li><strong>Infrastrutture:</strong> Assicuriamo connessioni stabili, PC, tablet e software aggiornati.</li>
+                        <li><strong>Comodato d'Uso:</strong> Prestito dispositivi per studenti con fondi PNRR.</li>
+                        <li><strong>Spazi Connessi:</strong> Aree studio gratuite con dispositivi e connettività.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <section id="strategie" class="page-section">
-            <div class="container">
-                <h2>Come Riduciamo il Divario Digitale</h2>
-
-                <h3 style="margin-top: 2rem;">Progetto Buone Pratiche per l'Innovazione Didattica</h3>
-                <p>Queste sono le risorse principali sviluppate dal nostro team per supportare il progetto:</p>
-                <ul class="resource-list" style="margin-bottom: 2rem; border-top: 1px dashed #ccc;">
-                    <li><a href="https://iismendel.github.io/Progetto-PNNR-Buone-Pratiche_PANORAMICA_IIS-MENDEL/" target="_blank"><strong>Panoramica Progetto Buone Pratiche PNRR</strong></a><span> (La visione d'insieme del nostro progetto)</span></li>
-                    <li><a href="https://iismendel.github.io/Hub-software-gratuiti-per-studenti-e-docenti_IIS-MENDEL/" target="_blank"><strong>Hub Software Gratuiti</strong></a><span> (Risorse software per studenti e docenti)</span></li>
-                </ul>
-                <p style="margin-top: 2rem;">Il nostro istituto agisce sui seguenti fronti per promuovere l'inclusione digitale. Clicca sulle sezioni per espanderle.</p>
-                
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-button">💻 Garanzia di Accesso e Risorse</button>
-                        <div class="accordion-panel">
-                            <ul>
-                                <li><strong>Infrastrutture:</strong> Assicuriamo connessioni stabili, PC, tablet e software aggiornati in aule e laboratori.</li>
-                                <li><strong>Comodato d'Uso:</strong> Implementiamo programmi di prestito dispositivi (laptop, tablet) per gli studenti che ne sono sprovvisti, usando anche i fondi PNRR.</li>
-                                <li><strong>Spazi Connessi:</strong> Potenziamo aree studio dove gli studenti possono usare gratuitamente dispositivi e connettività, con il supporto di tutor.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-button">🎓 Sviluppo Competenze Trasversali</button>
-                        <div class="accordion-panel">
-                            <ul>
-                                <li><strong>Integrazione nel Curricolo:</strong> Le competenze digitali sono in tutte le materie. In un istituto agrario, questo significa usare software GIS in geografia, fogli di calcolo per l'analisi dati in matematica o creare presentazioni multimediali in scienze agrarie.</li>
-                                <li><strong>Didattica Innovativa:</strong> Incentiviamo l'apprendimento basato su progetti (PBL) e il lavoro collaborativo online.</li>
-                                <li><strong>Alfabetizzazione Mediatica:</strong> Educhiamo al riconoscimento delle fake news, alla tutela della privacy e alla sicurezza informatica.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-button">👨‍🏫 Formazione Docenti</button>
-                        <div class="accordion-panel">
-                            <p>Offriamo percorsi di formazione continua ai docenti sulle nuove tecnologie e metodologie didattiche. Un corpo docente aggiornato è il motore del cambiamento.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-button">👨‍👩‍👧‍👦 Coinvolgimento delle Famiglie</button>
-                        <div class="accordion-panel">
-                            <p>Organizziamo incontri e workshop per i genitori sull'uso sicuro e responsabile delle tecnologie, per ridurre il divario generazionale e creare un ambiente di supporto anche a casa.</p>
-                        </div>
-                    </div>
+            <div class="accordion-item">
+                <button class="accordion-button">🎓 Sviluppo Competenze Trasversali</button>
+                <div class="accordion-panel">
+                    <ul>
+                        <li><strong>Integrazione nel Curricolo:</strong> Uso del digitale nelle discipline agrarie e STEM.</li>
+                        <li><strong>Didattica Innovativa:</strong> Apprendimento basato su progetti (PBL) e lavoro collaborativo.</li>
+                        <li><strong>Alfabetizzazione Mediatica:</strong> Educazione alle fake news e alla sicurezza online.</li>
+                    </ul>
                 </div>
-                
             </div>
-        </section>
-        
-        <section id="risorse" class="page-section">
-            <div class="container">
-                <h2>Risorse, Strumenti e Piattaforme</h2>
-                <p>Una raccolta di risorse utili per approfondire, formarsi e sperimentare.</p>
-                
-                <h3>🇪🇺 Documenti PNRR e Istituzionali</h3>
-                <ul class="resource-list">
-                    <li><a href="https://pnrr.istruzione.it/" target="_blank"><strong>Sito ufficiale PNRR Istruzione</strong></a></li>
-                    <li><a href="https://pnrr.istruzione.it/news/pubblicato-il-piano-scuola-4-0/" target="_blank"><strong>PNRR Scuola 4.0</strong></a><span> (Link specifico al piano)</span></li>
-                    <li><a href="https://scuoladigitale.istruzione.it/" target="_blank"><strong>MIUR - Piano Nazionale Scuola Digitale</strong></a></li>
-                </ul>
-
-                <h3>🤝 Linee Guida (Peer Education e Competenze)</h3>
-                <ul class="resource-list">
-                    <li><a href="https://www.indire.it/" target="_blank"><strong>INDIRE - Risorse per l'innovazione</strong></a></li>
-                    <li><a href="https://www.generazioniconnesse.it/" target="_blank"><strong>Generazioni Connesse</strong></a></li>
-                    <li><a href="http://www.eun.org/" target="_blank"><strong>European Schoolnet</strong></a></li>
-                    <li><a href="https://www.agid.gov.it/it/design-servizi/competenze-digitali" target="_blank"><strong>DigComp - Framework europeo</strong></a><span> (Pagina di riferimento AGID)</span></li>
-                </ul>
-                
-                <h3>📊 Articoli e Ricerche (Divario Digitale)</h3>
-                <ul class="resource-list">
-                    <li><a href="https://www.istat.it/it/files/2023/12/Cittadini-e-ICT-2023.pdf" target="_blank"><strong>ISTAT - Rapporto "Cittadini e ICT 2023"</strong></a><span> (Link diretto al PDF)</span></li>
-                    <li><a href="https://www.agid.gov.it/" target="_blank"><strong>AGID - Agenzia per l'Italia Digitale</strong></a></li>
-                    <li><a href="https://ec.europa.eu/eurostat/web/digital-economy-and-society/data/database" target="_blank"><strong>Eurostat - Statistiche economia digitale</strong></a></li>
-                </ul>
-
-                <h3>🎓 Piattaforme di Formazione Digitale Gratuite</h3>
-                <ul class="resource-list">
-                    <li><a href="https://skillshop.withgoogle.com/" target="_blank"><strong>Google Digital Training</strong></a><span> (Ora parte di Skillshop)</span></li>
-                    <li><a href="https://code.org/" target="_blank"><strong>Code.org</strong></a><span> (Coding e pensiero computazionale)</span></li>
-                    <li><a href="https://learn.microsoft.com/it-it/" target="_blank"><strong>Microsoft Learn</strong></a></li>
-                    <li><a href="https://www.coursera.org/" target="_blank"><strong>Coursera</strong></a></li>
-                    <li><a href="https://scratch.mit.edu/" target="_blank"><strong>Scratch</strong></a><span> (Programmazione creativa)</span></li>
-                    <li><a href="https://it.khanacademy.org/" target="_blank"><strong>Khan Academy</strong></a></li>
-                </ul>
-                
-                <h3>💡 Risorse per Progetti Didattici Innovativi</h3>
-                <ul class="resource-list">
-                    <li><a href="https://iismendel.github.io/Progetto-PNNR-Buone-Pratiche_PANORAMICA_IIS-MENDEL/" target="_blank"><strong>Progetto Buone Pratiche IIS MENDEL</strong></a><span> (La panoramica del nostro progetto PNRR)</span></li>
-                    <li><a href="https://www.scientix.eu/" target="_blank"><strong>Scientix</strong></a><span> (La comunità europea per l'educazione scientifica)</span></li>
-                    <li><a href="https://school-education.ec.europa.eu/it/etwinning" target="_blank"><strong>eTwinning</strong></a><span> (Gemellaggi elettronici tra scuole europee)</span></li>
-                    <li><a href="https://xfarm.ag/xfarm-education" target="_blank"><strong>xFarm Education</strong></a><span> (Formazione e tecnologia per l'Agricoltura 4.0 negli istituti agrari)</span></li>
-                    <li><a href="https://www.horta-srl.it/horta-4-school-lagricoltura-4-0-tra-i-banchi-di-scuola-comunicato-stampa-1-2020/" target="_blank"><strong>Horta4School</strong></a><span> (Progetto per introdurre l'agricoltura di precisione nelle scuole)</span></li>
-                    <li><a href="https://fem.digital/didattica-stem-ambiente/" target="_blank"><strong>Future Education Modena (FEM)</strong></a><span> (Kit didattici innovativi STEM, idroponica e sostenibilità)</span></li>
-                </ul>
-
-                <h3>🚜 Software Gratuiti per la Didattica (STEM e Agrario)</h3>
-                <ul class="resource-list">
-                    <li><a href="https://iismendel.github.io/Hub-software-gratuiti-per-studenti-e-docenti_IIS-MENDEL/" target="_blank"><strong>Hub Software Gratuiti IIS MENDEL</strong></a><span> (Pagina curata dal Team Buone Pratiche)</span></li>
-                    <li><a href="https://www.qgis.org/it/site/" target="_blank"><strong>QGIS</strong></a><span> (Sistema Informativo Geografico)</span></li>
-                    <li><a href="https://it.libreoffice.org/" target="_blank"><strong>LibreOffice</strong></a><span> (Suite per ufficio gratuita)</span></li>
-                    <li><a href="https://grass.osgeo.org/" target="_blank"><strong>GRASS GIS</strong></a><span> (Analisi geospaziale avanzata)</span></li>
-                    <li><a href="https://www.r-project.org/" target="_blank"><strong>R - Software statistico</strong></a></li>
-                    <li><a href="https://www.gimp.org/" target="_blank"><strong>GIMP</strong></a><span> (Editor di immagini gratuito)</span></li>
-                    <li><a href="https://stellarium.org/it/" target="_blank"><strong>Stellarium</strong></a><span> (Planetario virtuale)</span></li>
-                </ul>
-                
-                <h3>📈 Banche Dati e Risorse Specializzate</h3>
-                <ul class="resource-list">
-                    <li><a href="https://www.fao.org/faostat/en/" target="_blank"><strong>FAOSTAT</strong></a><span> (Statistiche agricole mondiali)</span></li>
-                    <li><a href="https://www.eea.europa.eu/it" target="_blank"><strong>Agenzia Europea dell'Ambiente</strong></a></li>
-                    <li><a href="https://climate.copernicus.eu/" target="_blank"><strong>Copernicus Climate Change Service</strong></a></li>
-                    <li><a href="https://data.worldbank.org/" target="_blank"><strong>World Bank Open Data</strong></a></li>
-                </ul>
+            <div class="accordion-item">
+                <button class="accordion-button">👨‍🏫 Formazione Docenti</button>
+                <div class="accordion-panel">
+                    <p>Formazione continua su tecnologie e metodologie didattiche innovative.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-    </main>
+<section id="risorse" class="page-section">
+    <div class="container">
+        <h2>Risorse, Strumenti e Piattaforme</h2>
+        <p>Una raccolta di risorse utili per approfondire, formarsi e sperimentare.</p>
 
-    <footer id="chi-siamo" class="main-footer">
-        <div class="container">
-            <h4>Un Progetto del "Team Buone Pratiche"</h4>
-            <p>Questa risorsa è stata sviluppata dal <strong>Team Buone Pratiche per l'Innovazione Didattica</strong> dell'IIS Mendel, un gruppo di lavoro dedicato alla ricerca e condivisione di metodologie innovative per il miglioramento della qualità educativa.</p>
-            </div>
-    </footer>
+        <h3>🇪🇺 Documenti PNRR e Istituzionali</h3>
+<ul class="resource-list">
+    <li>
+        <a href="https://pnrr.istruzione.it/" target="_blank" rel="noopener noreferrer">
+            <strong>Sito ufficiale PNRR Istruzione</strong>
+        </a>
+    </li>
+    <li>
+        <a href="https://pnrr.istruzione.it/news/pubblicato-il-piano-scuola-4-0/" target="_blank" rel="noopener noreferrer">
+            <strong>PNRR Scuola 4.0</strong>
+        </a>
+        <span>(Link specifico al piano)</span>
+    </li>
+    <li>
+        <a href="https://scuoladigitale.istruzione.it/" target="_blank" rel="noopener noreferrer">
+            <strong>MIUR - Piano Nazionale Scuola Digitale</strong>
+        </a>
+    </li>
+    <li>
+        <a href="https://iismendel.github.io/Linee-guida-IA_Miniistero_IIS-MENDEL/" target="_blank" rel="noopener noreferrer">
+            <strong>🤖 Linee Guida IA – MIM</strong>
+        </a>
+        <span>Documento ufficiale del Ministero dell’Istruzione e del Merito sull’uso responsabile dell’IA nelle scuole (2025)</span>
+    </li>
+</ul>
 
-    <script>
-        // --- Script per Accordion ---
-        
-        // Seleziona tutti i bottoni dell'accordion
-        const accordionButtons = document.querySelectorAll('.accordion-button');
 
-        accordionButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Trova il pannello relativo a questo bottone
-                const panel = button.nextElementSibling;
-                
-                // Attiva/disattiva la classe 'active' sul bottone
-                button.classList.toggle('active');
-                
-                // Attiva/disattiva la classe 'active' sul pannello
-                panel.classList.toggle('active');
-            });
-        });
-        
-    </script>
-    </body>
+        <h3>🤝 Linee Guida (Peer Education e Competenze)</h3>
+        <ul class="resource-list">
+            <li><a href="https://www.indire.it/" target="_blank"><strong>INDIRE - Risorse per l'innovazione</strong></a></li>
+            <li><a href="https://www.generazioniconnesse.it/" target="_blank"><strong>Generazioni Connesse</strong></a></li>
+            <li><a href="http://www.eun.org/" target="_blank"><strong>European Schoolnet</strong></a></li>
+            <li><a href="https://www.agid.gov.it/it/design-servizi/competenze-digitali" target="_blank"><strong>DigComp - Framework europeo</strong></a><span>(Pagina di riferimento AGID)</span></li>
+        </ul>
+
+        <h3>📊 Articoli e Ricerche (Divario Digitale)</h3>
+        <ul class="resource-list">
+            <li><a href="https://www.istat.it/it/files/2023/12/Cittadini-e-ICT-2023.pdf" target="_blank"><strong>ISTAT - Rapporto "Cittadini e ICT 2023"</strong></a><span>(Link diretto al PDF)</span></li>
+            <li><a href="https://www.agid.gov.it/" target="_blank"><strong>AGID - Agenzia per l'Italia Digitale</strong></a></li>
+            <li><a href="https://ec.europa.eu/eurostat/web/digital-economy-and-society/data/database" target="_blank"><strong>Eurostat - Statistiche economia digitale</strong></a></li>
+        </ul>
+
+        <h3>🎓 Piattaforme di Formazione Digitale Gratuite</h3>
+        <ul class="resource-list">
+            <li><a href="https://skillshop.withgoogle.com/" target="_blank"><strong>Google Digital Training</strong></a><span>(Ora parte di Skillshop)</span></li>
+            <li><a href="https://code.org/" target="_blank"><strong>Code.org</strong></a><span>(Coding e pensiero computazionale)</span></li>
+            <li><a href="https://learn.microsoft.com/it-it/" target="_blank"><strong>Microsoft Learn</strong></a></li>
+            <li><a href="https://www.coursera.org/" target="_blank"><strong>Coursera</strong></a></li>
+            <li><a href="https://scratch.mit.edu/" target="_blank"><strong>Scratch</strong></a><span>(Programmazione creativa)</span></li>
+            <li><a href="https://it.khanacademy.org/" target="_blank"><strong>Khan Academy</strong></a></li>
+        </ul>
+
+        <h3>💡 Risorse per Progetti Didattici Innovativi</h3>
+        <ul class="resource-list">
+            <li><a href="https://iismendel.github.io/Progetto-PNNR-Buone-Pratiche_PANORAMICA_IIS-MENDEL/" target="_blank"><strong>Progetto Buone Pratiche IIS MENDEL</strong></a><span>(La panoramica del nostro progetto PNRR)</span></li>
+            <li><a href="https://www.scientix.eu/" target="_blank"><strong>Scientix</strong></a><span>(La comunità europea per l'educazione scientifica)</span></li>
+            <li><a href="https://school-education.ec.europa.eu/it/etwinning" target="_blank"><strong>eTwinning</strong></a><span>(Gemellaggi elettronici tra scuole europee)</span></li>
+            <li><a href="https://xfarm.ag/xfarm-education" target="_blank"><strong>xFarm Education</strong></a><span>(Formazione e tecnologia per l'Agricoltura 4.0 negli istituti agrari)</span></li>
+            <li><a href="https://www.horta-srl.it/horta-4-school-lagricoltura-4-0-tra-i-banchi-di-scuola-comunicato-stampa-1-2020/" target="_blank"><strong>Horta4School</strong></a><span>(Progetto per introdurre l'agricoltura di precisione nelle scuole)</span></li>
+            <li><a href="https://fem.digital/didattica-stem-ambiente/" target="_blank"><strong>Future Education Modena (FEM)</strong></a><span>(Kit didattici innovativi STEM, idroponica e sostenibilità)</span></li>
+        </ul>
+
+        <h3>🚜 Software Gratuiti per la Didattica (STEM e Agrario)</h3>
+        <ul class="resource-list">
+            <li><a href="https://iismendel.github.io/Hub-software-gratuiti-per-studenti-e-docenti_IIS-MENDEL/" target="_blank"><strong>Hub Software Gratuiti IIS MENDEL</strong></a><span>(Pagina curata dal Team Buone Pratiche)</span></li>
+            <li><a href="https://www.qgis.org/it/site/" target="_blank"><strong>QGIS</strong></a><span>(Sistema Informativo Geografico)</span></li>
+            <li><a href="https://it.libreoffice.org/" target="_blank"><strong>LibreOffice</strong></a><span>(Suite per ufficio gratuita)</span></li>
+            <li><a href="https://grass.osgeo.org/" target="_blank"><strong>GRASS GIS</strong></a><span>(Analisi geospaziale avanzata)</span></li>
+            <li><a href="https://www.r-project.org/" target="_blank"><strong>R - Software statistico</strong></a></li>
+            <li><a href="https://www.gimp.org/" target="_blank"><strong>GIMP</strong></a><span>(Editor di immagini gratuito)</span></li>
+            <li><a href="https://stellarium.org/it/" target="_blank"><strong>Stellarium</strong></a><span>(Planetario virtuale)</span></li>
+        </ul>
+
+        <h3>📈 Banche Dati e Risorse Specializzate</h3>
+        <ul class="resource-list">
+            <li><a href="https://www.fao.org/faostat/en/" target="_blank"><strong>FAOSTAT</strong></a><span>(Statistiche agricole mondiali)</span></li>
+            <li><a href="https://www.eea.europa.eu/it" target="_blank"><strong>Agenzia Europea dell'Ambiente</strong></a></li>
+            <li><a href="https://climate.copernicus.eu/" target="_blank"><strong>Copernicus Climate Change Service</strong></a></li>
+            <li><a href="https://data.worldbank.org/" target="_blank"><strong>World Bank Open Data</strong></a></li>
+        </ul>
+    </div>
+</section>
+
+</main>
+
+<footer id="chi-siamo" class="main-footer">
+    <div class="container">
+        <h4>Un Progetto del "Team Buone Pratiche"</h4>
+        <p>Questa risorsa è stata sviluppata dal <strong>Team Buone Pratiche per l'Innovazione Didattica</strong> dell'IIS Mendel, un gruppo di lavoro dedicato alla ricerca e condivisione di metodologie innovative per il miglioramento della qualità educativa.</p>
+    </div>
+</footer>
+
+<script>
+const accordionButtons = document.querySelectorAll('.accordion-button');
+accordionButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const panel = button.nextElementSibling;
+        button.classList.toggle('active');
+        panel.classList.toggle('active');
+    });
+});
+</script>
+
+</body>
 </html>
